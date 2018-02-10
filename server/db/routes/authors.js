@@ -76,6 +76,14 @@ router.delete("/:id", (req, res) => {
             res.status(200).send();
         }).catch(err => res.status(500).send("bad"));
     }).catch(err => res.status(500).send("bad"));
+
+    // db.Author.findById(req.params.id)
+    // .then(author => {
+    //     return author.destroy()
+    // }).then(author1 => {
+    //     if (!author1) res.status(404).send();
+    //     res.status(200).send();
+    // }).catch(err => res.status(500).send("bad"));
 });
 
 module.exports = router;

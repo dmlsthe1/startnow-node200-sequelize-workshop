@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    res.status(200).send();
+    res.status(200).send("Only /api/blogs or api/authors is working right now");
 });
 
 app.use("/api/authors", require("./db/routes/authors"));
